@@ -1,0 +1,69 @@
+import json, os, sys
+sys.path.insert(0, os.path.dirname(__file__))
+from template import say
+from build import CHAPTER, ROOT, SRC
+RES = {'1-01': ('F', '초파리 승'), '1-02': ('R', 'Money-Robo 승'), '1-03': ('F', '초파리 승'), '1-04': ('D', '무승부'),
+       '1-05': ('R', 'Money-Robo 승'), '1-06': ('R', 'Money-Robo 승'), '1-07': ('X', 'Money-Robo 실격')}
+COL = {'F': 'var(--c-fly)', 'R': 'var(--c-robo)', 'D': 'var(--amber)', 'X': 'var(--c-fly)'}
+DESC = {'1-01': '돈은 장부의 숫자이고, 디지털 숫자는 복사된다. 이중 지불을 직접 일으켜 본다.',
+        '1-02': '터미널 하나의 허브형과 이웃끼리 잇는 그물형. 평상시 속도와 고장에 대한 튼튼함을 잰다.',
+        '1-03': '만 원을 빌린 날의 기억과 각자 쓴 장부. 30일 뒤 무엇이 남는가.',
+        '1-04': '숫자·한글 병기와 간인·접인. 대조할 사본이 사라지면 왜 무력해지는가.',
+        '1-05': '증인의 다수결과 공모, 그리고 권한과 책임을 진 공증.',
+        '1-06': '은행 장부가 다툼을 끝내는 힘과, 그 대가인 수수료·해킹 표적·단일 실패 지점.',
+        '1-07': '모두가 장부를 나눠 드는 분산원장. 과반의 비용과 "한 표"를 누구에게 줄지.'}
+cards = []
+for p in CHAPTER['pages']:
+    info = json.load(open(os.path.join(SRC, f"info_{p['num']}.json")))
+    r, rt = RES[p['num']]
+    cards.append(f'<a href="{p["file"]}"><span class="n">{p["num"]}</span> <b>{info["title"]}</b><p>{DESC[p["num"]]}</p>'
+                 f'<p class="glabel">대결: {info["duel"]}</p><span class="res" style="color:{COL[r]};border-color:{COL[r]}">{r} · {rt}</span></a>')
+tally = {'F': 0, 'R': 0, 'D': 0}
+for r, _ in RES.values(): tally['F' if r in 'FX' else r] += 1
+html = f'''<!DOCTYPE html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>블록체인 1장 장부의 진화</title>
+<meta name="description" content="블록체인 편 1장 「장부의 진화」 목차: 기억에서 분산원장까지, 장부를 지키는 방법의 일곱 단계">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/lab.css">
+</head><body>
+<div id="prog" aria-hidden="true"></div>
+<nav class="top" aria-label="바로가기"><a class="logo" href="index.html"><i></i>{CHAPTER['short']}</a><a class="l" href="#toc">목차</a><a class="l" href="#ladder">사다리</a><a class="l" href="#score">대결 결산</a><a class="l" href="#about">이 저장소</a></nav>
+<header class="hero" id="top"><div class="hex"></div>
+  <div class="hero-bg" data-img="bg_ch1_index" role="img" aria-label="금화와 장부가 쌓인 회계실을 픽셀로 그린 배경"><canvas id="heroCv" aria-hidden="true"></canvas></div>
+  <div class="wrap"><div class="hero-text">
+    <div class="eyebrow">연구실 해설 대시보드 · 블록체인 편</div>
+    <h1>1장 장부의 진화</h1>
+    <p class="q">은행 없이, 서로 모르는 사람끼리 "누가 누구에게 얼마를 줬는지" 믿을 수 있을까?</p>
+    <p class="lead">기억 → 각자 장부 → 계약서 → 증인·공증 → 은행 → 다수의 증인. 장부를 지키는 방법이 어떻게 진화해 블록체인의 분산원장에 닿았는지 일곱 편으로 따라갑니다. 편마다 직접 장부를 고쳐 보고, 초파리 연구원과 Money-Robo의 대결로 결론을 확인합니다.</p></div>
+    <div class="dialog">{say('doc','front','doc_e08','한 편에 두 칸씩, 모두 열네 칸의 사다리예요. 1-01부터 순서대로 읽으면 각 칸이 앞 칸의 한계에서 시작해요.')}
+    {say('asst','smile','asst_e13','숫자는 편마다 이어져요. 1-03의 장부 보존율과 1-04의 위조 비율을 1-06에서 다시 써요.')}</div>
+  </div></header>
+<section class="level" id="toc"><div class="wrap"><h2>목차</h2><div class="toc">{''.join(cards)}</div></div></section>
+<section class="level" id="ladder"><div class="wrap"><h2>한 장으로 보는 사다리</h2>
+  <div class="tw"><table class="tb"><thead><tr><th>편</th><th>믿는 대상</th><th>위조하려면</th><th>남는 약점 → 다음 편</th></tr></thead><tbody>
+  <tr><td>1-01</td><td>(문제 제기) 같은 기록</td><td>기록 없이 숫자를 고치거나 파일을 복사</td><td>그 기록을 누가 지키나</td></tr>
+  <tr><td>1-02</td><td>(구조) 한 곳 vs 여럿</td><td>허브 하나를 멈추기</td><td>여러 사본을 어떻게 맞추나</td></tr>
+  <tr><td>1-03</td><td>상대방의 기억·장부</td><td>내 기록만 바꾸기</td><td>다르면 누가 맞는지 모름</td></tr>
+  <tr><td>1-04</td><td>문서의 안전장치</td><td>상대 사본 없애고 새로 쓰기</td><td>대조할 사본이 필요</td></tr>
+  <tr><td>1-05</td><td>증인·공증인</td><td>증인 매수·공모</td><td>공모, 비용, 한 사람을 믿음</td></tr>
+  <tr><td>1-06</td><td>기관 하나</td><td>그 한 곳을 뚫기</td><td>표적, 단일 실패 지점, 수수료</td></tr>
+  <tr><td>1-07</td><td>참여자 다수</td><td>과반을 동시에</td><td>변조 탐지, 투표 단위 → 2장</td></tr></tbody></table></div>
+</div></section>
+<section class="level" id="score"><div class="wrap"><h2>대결 결산</h2>
+  <section class="kpis"><div class="kpi" style="border-top-color:var(--c-fly)"><b>{tally['F']}승</b><span>초파리 연구원 (실격승 1번 포함)</span></div><div class="kpi" style="border-top-color:var(--c-robo)"><b>{tally['R']}승</b><span>Money-Robo</span></div><div class="kpi a"><b>{tally['D']}번</b><span>무승부</span></div></section>
+  {say('doc','judge','doc_e10','1장은 나눠 가졌다. 평상시 속도와 책임 있는 기관은 Money-Robo가, 기록과 규칙은 초파리가 가져갔다.')}
+</div></section>
+<section class="level" id="about"><div class="wrap"><h2>이 저장소</h2>
+  <p class="sub">각 HTML은 assets/ 폴더의 공용 파일(lab.css, lab.js, sprites.js)을 불러옵니다. 저장소를 통째로 올리거나 내려받아 index.html을 열면 됩니다. 편마다 맨 끝의 "온톨로지·서지 꾸러미"에서 지식 그래프와 참고문헌을 ZIP으로 가져갈 수 있습니다.</p>
+  <p class="sub">자료: 강의 교안 「4차산업시대의 금융 — 블록체인의 원리」 p.3–13, Nakamoto (2008). 캐릭터 그림: adminmrobo/fruitfly-lab-expressions (ea5da3f). 저자: 안상선.</p>
+  <p class="pn">다음: {CHAPTER['next_chapter']}</p>
+</div></section>
+<footer><div class="wrap"><p>연구실 해설 대시보드 · 블록체인 편 1장 · v1.0 · 2026-10-29</p></div></footer>
+<div id="tip"></div><div id="study"><span id="stTxt">읽은 곳 0%</span><button id="stBtn" hidden>밑줄</button></div>
+<script src="assets/sprites.js"></script><script src="assets/lab.js"></script>
+<script>Cast.fill();heroArt('C');requestAnimationFrame(loop);addEventListener('scroll',function(){{var h=document.documentElement,p=Math.round(100*h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight));$('#prog').style.width=p+'%';$('#stTxt').textContent='읽은 곳 '+p+'%';}},{{passive:true}});</script>
+</body></html>'''
+open(os.path.join(ROOT, 'index.html'), 'w').write(html)
+print('index ok')

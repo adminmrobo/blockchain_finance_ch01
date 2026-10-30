@@ -1,0 +1,737 @@
+{
+ "registry": "KG_00_registry",
+ "series": "연구실 해설 대시보드 · 블록체인 편",
+ "chapter": "1",
+ "version": "0.1",
+ "updated": "2026-10-29",
+ "note": "블록체인 편 첫 등록부. 2장·3장 작업 때 이 파일을 먼저 읽고 같은 개념은 같은 ID를 쓴다. 10번 단일 페이지(10_blockchain-ledger)의 ID와는 일부 다르므로 합칠 때 확인할 것.",
+ "concepts": {
+  "lab:concept/money-as-record": {
+   "type": "Concept",
+   "label": {
+    "ko": "장부의 숫자로서의 돈",
+    "en": "money as ledger entries"
+   },
+   "pages": [
+    "1-01"
+   ]
+  },
+  "lab:method/shared-ledger-check": {
+   "type": "Method",
+   "label": {
+    "ko": "공유 사용 기록부 확인",
+    "en": "checking a shared spending record"
+   },
+   "pages": [
+    "1-01"
+   ]
+  },
+  "lab:limitation/digital-copy": {
+   "type": "Limitation",
+   "label": {
+    "ko": "디지털 숫자는 복사된다",
+    "en": "digital data can be copied"
+   },
+   "pages": [
+    "1-01"
+   ]
+  },
+  "lab:limitation/who-keeps-ledger": {
+   "type": "Limitation",
+   "label": {
+    "ko": "그 장부는 누가 지키나",
+    "en": "who keeps the ledger"
+   },
+   "pages": [
+    "1-01"
+   ]
+  },
+  "lab:person/satoshi-nakamoto": {
+   "type": "Term",
+   "label": {
+    "ko": "사토시 나카모토 (필명)",
+    "en": "Satoshi Nakamoto (pseudonym)"
+   },
+   "pages": [
+    "1-01"
+   ]
+  },
+  "lab:metric/accepted-duplicates": {
+   "type": "Metric",
+   "label": {
+    "ko": "받아 준 중복 결제 건수",
+    "en": "accepted duplicate payments"
+   },
+   "pages": [
+    "1-01"
+   ]
+  },
+  "lab:method/instant-accept": {
+   "type": "Method",
+   "label": {
+    "ko": "파일만 보고 즉시 승인",
+    "en": "instant acceptance without check"
+   },
+   "pages": [
+    "1-01"
+   ]
+  },
+  "lab:analogy/voucher-copy": {
+   "type": "Analogy",
+   "label": {
+    "ko": "복사한 상품권 ↔ 이중 지불",
+    "en": "copied voucher ~ double-spending"
+   },
+   "pages": [
+    "1-01"
+   ]
+  },
+  "lab:concept/ledger": {
+   "type": "Concept",
+   "label": {
+    "ko": "장부",
+    "en": "ledger"
+   },
+   "pages": [
+    "1-01",
+    "1-03",
+    "1-04"
+   ]
+  },
+  "lab:concept/blockchain": {
+   "type": "Concept",
+   "label": {
+    "ko": "블록체인",
+    "en": "blockchain"
+   },
+   "pages": [
+    "1-01",
+    "1-02",
+    "1-04",
+    "1-05",
+    "1-07"
+   ]
+  },
+  "lab:method/distributed-ledger": {
+   "type": "Method",
+   "label": {
+    "ko": "분산원장",
+    "en": "distributed ledger"
+   },
+   "pages": [
+    "1-01",
+    "1-02",
+    "1-06",
+    "1-07"
+   ]
+  },
+  "lab:concept/bitcoin": {
+   "type": "Concept",
+   "label": {
+    "ko": "비트코인",
+    "en": "Bitcoin"
+   },
+   "pages": [
+    "1-01"
+   ]
+  },
+  "lab:term/white-paper": {
+   "type": "Term",
+   "label": {
+    "ko": "백서",
+    "en": "white paper"
+   },
+   "pages": [
+    "1-01",
+    "1-07"
+   ]
+  },
+  "lab:concept/double-spending": {
+   "type": "Concept",
+   "label": {
+    "ko": "이중 지불",
+    "en": "double-spending"
+   },
+   "pages": [
+    "1-01"
+   ]
+  },
+  "lab:concept/trusted-third-party": {
+   "type": "Concept",
+   "label": {
+    "ko": "중개자",
+    "en": "trusted third party"
+   },
+   "pages": [
+    "1-01",
+    "1-02",
+    "1-03",
+    "1-05",
+    "1-06"
+   ]
+  },
+  "lab:method/mesh-network": {
+   "type": "Method",
+   "label": {
+    "ko": "그물형 (분산 네트워크)",
+    "en": "mesh / distributed network"
+   },
+   "pages": [
+    "1-02"
+   ]
+  },
+  "lab:limitation/copies-must-agree": {
+   "type": "Limitation",
+   "label": {
+    "ko": "여러 사본을 똑같이 유지해야 함",
+    "en": "copies must stay consistent"
+   },
+   "pages": [
+    "1-02"
+   ]
+  },
+  "lab:metric/connected-pairs": {
+   "type": "Metric",
+   "label": {
+    "ko": "연결 유지 쌍 비율",
+    "en": "share of connected pairs"
+   },
+   "pages": [
+    "1-02"
+   ]
+  },
+  "lab:concept/scalability": {
+   "type": "Concept",
+   "label": {
+    "ko": "확장성",
+    "en": "scalability"
+   },
+   "pages": [
+    "1-02"
+   ]
+  },
+  "lab:analogy/bus-terminal": {
+   "type": "Analogy",
+   "label": {
+    "ko": "버스 터미널 ↔ 중앙집중식",
+    "en": "bus terminal ~ centralized system"
+   },
+   "pages": [
+    "1-02"
+   ]
+  },
+  "lab:analogy/village-roads": {
+   "type": "Analogy",
+   "label": {
+    "ko": "마을 길 ↔ 분산 네트워크",
+    "en": "village roads ~ distributed network"
+   },
+   "pages": [
+    "1-02"
+   ]
+  },
+  "lab:method/centralized-network": {
+   "type": "Method",
+   "label": {
+    "ko": "중앙집중식 시스템",
+    "en": "중앙집중식 시스템"
+   },
+   "pages": [
+    "1-02"
+   ]
+  },
+  "lab:limitation/single-point-of-failure": {
+   "type": "Limitation",
+   "label": {
+    "ko": "단일 실패 지점",
+    "en": "single point of failure"
+   },
+   "pages": [
+    "1-02",
+    "1-06"
+   ]
+  },
+  "lab:term/node": {
+   "type": "Term",
+   "label": {
+    "ko": "노드",
+    "en": "node"
+   },
+   "pages": [
+    "1-02",
+    "1-07"
+   ]
+  },
+  "lab:metric/average-hops": {
+   "type": "Metric",
+   "label": {
+    "ko": "홉",
+    "en": "hop"
+   },
+   "pages": [
+    "1-02"
+   ]
+  },
+  "lab:method/memory-record": {
+   "type": "Method",
+   "label": {
+    "ko": "기억으로 남긴 거래",
+    "en": "memory-only record"
+   },
+   "pages": [
+    "1-03"
+   ]
+  },
+  "lab:method/personal-ledgers": {
+   "type": "Method",
+   "label": {
+    "ko": "각자 쓰는 장부",
+    "en": "separate personal ledgers"
+   },
+   "pages": [
+    "1-03"
+   ]
+  },
+  "lab:limitation/memory-fades": {
+   "type": "Limitation",
+   "label": {
+    "ko": "기억은 흐려지고 거짓말을 가려낼 수 없음",
+    "en": "memory fades and lies cannot be detected"
+   },
+   "pages": [
+    "1-03"
+   ]
+  },
+  "lab:limitation/ledger-loss-tamper": {
+   "type": "Limitation",
+   "label": {
+    "ko": "장부 분실·조작, 누가 맞는지 판정 불가",
+    "en": "ledger loss, tampering, unresolved disputes"
+   },
+   "pages": [
+    "1-03"
+   ]
+  },
+  "lab:method/mutual-check": {
+   "type": "Method",
+   "label": {
+    "ko": "서로 장부 확인",
+    "en": "mutual ledger check"
+   },
+   "pages": [
+    "1-03"
+   ]
+  },
+  "lab:metric/both-accurate": {
+   "type": "Metric",
+   "label": {
+    "ko": "두 기록이 모두 정확한 비율",
+    "en": "both records accurate"
+   },
+   "pages": [
+    "1-03"
+   ]
+  },
+  "lab:method/cross-seal": {
+   "type": "Method",
+   "label": {
+    "ko": "간인·접인 계약서",
+    "en": "cross-page / cross-copy seals"
+   },
+   "pages": [
+    "1-04"
+   ]
+  },
+  "lab:limitation/consistent-forgery": {
+   "type": "Limitation",
+   "label": {
+    "ko": "두 표기를 모두 맞게 고친 위조",
+    "en": "consistent forgery"
+   },
+   "pages": [
+    "1-04"
+   ]
+  },
+  "lab:limitation/copy-lost": {
+   "type": "Limitation",
+   "label": {
+    "ko": "대조할 사본이 사라짐",
+    "en": "reference copy lost"
+   },
+   "pages": [
+    "1-04"
+   ]
+  },
+  "lab:concept/fake-seal": {
+   "type": "Concept",
+   "label": {
+    "ko": "가짜 도장 (사진 편집 위조)",
+    "en": "forged seal via photo editing"
+   },
+   "pages": [
+    "1-04"
+   ]
+  },
+  "lab:metric/detected-forgeries": {
+   "type": "Metric",
+   "label": {
+    "ko": "찾아낸 위조 문서 수",
+    "en": "detected forgeries"
+   },
+   "pages": [
+    "1-04"
+   ]
+  },
+  "lab:method/plain-iou": {
+   "type": "Method",
+   "label": {
+    "ko": "숫자만 적은 차용증",
+    "en": "plain IOU with digits only"
+   },
+   "pages": [
+    "1-04"
+   ]
+  },
+  "lab:analogy/seal-chain": {
+   "type": "Analogy",
+   "label": {
+    "ko": "걸쳐 찍은 도장 ↔ 앞 블록 값을 담은 블록",
+    "en": "cross-seal ~ hash-linked blocks"
+   },
+   "pages": [
+    "1-04"
+   ]
+  },
+  "lab:method/dual-notation": {
+   "type": "Method",
+   "label": {
+    "ko": "병기",
+    "en": "숫자·한글"
+   },
+   "pages": [
+    "1-04"
+   ]
+  },
+  "lab:term/ganin": {
+   "type": "Term",
+   "label": {
+    "ko": "간인",
+    "en": "간인"
+   },
+   "pages": [
+    "1-04"
+   ]
+  },
+  "lab:term/jeobin": {
+   "type": "Term",
+   "label": {
+    "ko": "접인",
+    "en": "접인"
+   },
+   "pages": [
+    "1-04"
+   ]
+  },
+  "lab:method/witnesses": {
+   "type": "Method",
+   "label": {
+    "ko": "증인의 다수결",
+    "en": "witness majority"
+   },
+   "pages": [
+    "1-05"
+   ]
+  },
+  "lab:limitation/witness-collusion": {
+   "type": "Limitation",
+   "label": {
+    "ko": "증인의 거짓말과 공모",
+    "en": "witness lies and collusion"
+   },
+   "pages": [
+    "1-05"
+   ]
+  },
+  "lab:limitation/notary-cost": {
+   "type": "Limitation",
+   "label": {
+    "ko": "공증의 비용과 한 곳에 대한 신뢰",
+    "en": "notary cost and single trusted party"
+   },
+   "pages": [
+    "1-05"
+   ]
+  },
+  "lab:concept/independence": {
+   "type": "Concept",
+   "label": {
+    "ko": "증인의 독립성",
+    "en": "independence of witnesses"
+   },
+   "pages": [
+    "1-05"
+   ]
+  },
+  "lab:metric/wrong-accepted": {
+   "type": "Metric",
+   "label": {
+    "ko": "틀린 기록이 인정될 확률",
+    "en": "probability a false record is accepted"
+   },
+   "pages": [
+    "1-05"
+   ]
+  },
+  "lab:method/notarization": {
+   "type": "Method",
+   "label": {
+    "ko": "공증",
+    "en": "notarization"
+   },
+   "pages": [
+    "1-05"
+   ]
+  },
+  "lab:term/perjury": {
+   "type": "Term",
+   "label": {
+    "ko": "위증",
+    "en": "perjury"
+   },
+   "pages": [
+    "1-05"
+   ]
+  },
+  "lab:concept/majority-vote": {
+   "type": "Concept",
+   "label": {
+    "ko": "과반 다수결",
+    "en": "majority vote"
+   },
+   "pages": [
+    "1-05",
+    "1-07"
+   ]
+  },
+  "lab:method/bank-ledger": {
+   "type": "Method",
+   "label": {
+    "ko": "기관 장부 (은행 전산 원장)",
+    "en": "institutional ledger (bank)"
+   },
+   "pages": [
+    "1-06"
+   ]
+  },
+  "lab:method/central-auth": {
+   "type": "Method",
+   "label": {
+    "ko": "중앙 인증 (공인인증서·OTP)",
+    "en": "centralized authentication"
+   },
+   "pages": [
+    "1-06"
+   ]
+  },
+  "lab:limitation/target-and-cost": {
+   "type": "Limitation",
+   "label": {
+    "ko": "해킹 표적과 수수료",
+    "en": "attack target and fees"
+   },
+   "pages": [
+    "1-06"
+   ]
+  },
+  "lab:limitation/auth-centralized": {
+   "type": "Limitation",
+   "label": {
+    "ko": "인증도 한 곳에 집중",
+    "en": "authentication is centralized"
+   },
+   "pages": [
+    "1-06"
+   ]
+  },
+  "lab:metric/resolved-disputes": {
+   "type": "Metric",
+   "label": {
+    "ko": "판정 가능한 분쟁 비율",
+    "en": "share of resolvable disputes"
+   },
+   "pages": [
+    "1-06"
+   ]
+  },
+  "lab:method/peer-records": {
+   "type": "Method",
+   "label": {
+    "ko": "각자 장부 + 병기 계약서",
+    "en": "peer records with contract"
+   },
+   "pages": [
+    "1-06"
+   ]
+  },
+  "lab:concept/fee": {
+   "type": "Concept",
+   "label": {
+    "ko": "수수료",
+    "en": "fee"
+   },
+   "pages": [
+    "1-06"
+   ]
+  },
+  "lab:method/certificate-auth": {
+   "type": "Method",
+   "label": {
+    "ko": "공인인증서",
+    "en": "공인인증서"
+   },
+   "pages": [
+    "1-06"
+   ]
+  },
+  "lab:method/otp": {
+   "type": "Method",
+   "label": {
+    "ko": "OTP",
+    "en": "일회용 비밀번호"
+   },
+   "pages": [
+    "1-06"
+   ]
+  },
+  "lab:metric/availability": {
+   "type": "Metric",
+   "label": {
+    "ko": "가용성",
+    "en": "availability"
+   },
+   "pages": [
+    "1-06"
+   ]
+  },
+  "lab:method/costly-vote": {
+   "type": "Method",
+   "label": {
+    "ko": "복제하기 어려운 투표권",
+    "en": "votes tied to a costly resource"
+   },
+   "pages": [
+    "1-07"
+   ]
+  },
+  "lab:limitation/majority-takeover": {
+   "type": "Limitation",
+   "label": {
+    "ko": "과반을 장악하면 위조가 이긴다",
+    "en": "majority takeover"
+   },
+   "pages": [
+    "1-07"
+   ]
+  },
+  "lab:limitation/open-questions-ch2": {
+   "type": "Limitation",
+   "label": {
+    "ko": "변조 탐지와 투표 단위 (2장 과제)",
+    "en": "tamper detection and vote unit"
+   },
+   "pages": [
+    "1-07"
+   ]
+  },
+  "lab:metric/attack-cost": {
+   "type": "Metric",
+   "label": {
+    "ko": "공격 손익",
+    "en": "attack profit"
+   },
+   "pages": [
+    "1-07"
+   ]
+  },
+  "lab:metric/vote-count": {
+   "type": "Metric",
+   "label": {
+    "ko": "표 수",
+    "en": "vote count"
+   },
+   "pages": [
+    "1-07"
+   ]
+  },
+  "lab:concept/voting-rule": {
+   "type": "Concept",
+   "label": {
+    "ko": "투표 규칙 (누가 한 표를 갖나)",
+    "en": "voting rule"
+   },
+   "pages": [
+    "1-07"
+   ]
+  },
+  "lab:analogy/nine-ledgers": {
+   "type": "Analogy",
+   "label": {
+    "ko": "아홉 권의 장부 ↔ 분산원장",
+    "en": "nine ledgers ~ distributed ledger"
+   },
+   "pages": [
+    "1-07"
+   ]
+  },
+  "lab:concept/sybil": {
+   "type": "Concept",
+   "label": {
+    "ko": "가짜 노드",
+    "en": "Sybil"
+   },
+   "pages": [
+    "1-07"
+   ]
+  }
+ },
+ "works": {
+  "lab:work/lecture2024blockchain": {
+   "type": "Work",
+   "label": {
+    "ko": "강의 교안: 블록체인의 원리",
+    "en": "Lecture notes: principles of blockchain"
+   },
+   "pages": [
+    "1-01",
+    "1-02",
+    "1-03",
+    "1-04",
+    "1-05",
+    "1-06",
+    "1-07"
+   ]
+  },
+  "lab:work/nakamoto2008bitcoin": {
+   "type": "Work",
+   "label": {
+    "ko": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+    "en": "Bitcoin white paper"
+   },
+   "pages": [
+    "1-01",
+    "1-06",
+    "1-07"
+   ]
+  },
+  "lab:work/seoul2019perjury": {
+   "type": "Work",
+   "label": {
+    "ko": "서울신문: 매년 3000여건 거짓 증언",
+    "en": "Seoul Shinmun on perjury"
+   },
+   "pages": [
+    "1-05"
+   ]
+  }
+ }
+}
