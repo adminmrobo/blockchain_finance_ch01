@@ -50,9 +50,9 @@ function ledgers(N,k,fake){var L=[];for(var i=0;i<N;i++)L.push({reg:true,forged:
     m.push(['a','하지만 비트코인 같은 열린 망에는 "등록 명부"가 없어요. 그래서 백서는 한 표를 계산력에 묶었어요(2장).']);ins($('#ins2'),m);drawA();drawB(0);}
   mod(c2b,drawB,true);addEventListener('resize',upd);upd();})();
 
-Duel({names:{fly:'초파리 (정직한 장부)',robo:'Money-Robo (고친+가짜)'},higherIsBetter:true,drawMargin:0,
+Duel({names:{fly:'초파리 (정직한 장부)',robo:'주판봇 (고친+가짜)'},higherIsBetter:true,drawMargin:0,
   run:function(){var all=vote(ledgers(9,4,6),'open'),legal=vote(ledgers(9,4,6),'reg');return {fly:legal.orig,robo:all.forged,foul:legal.illegal>0,legal:legal};},
   bar:function(v){return v/12;},fmt:function(v){return v+'표';},
   lesson:'표는 진짜 참여자의 것이어야 한다',foulRule:'"등록된 참여자만 투표한다"는 규칙',
-  say:function(r){return '표 수는 초파리 쪽 '+r.fly+'표, Money-Robo 쪽 '+r.robo+'표예요. 그런데 Money-Robo 표 가운데 '+r.legal.illegal+'표는 등록되지 않은 가짜 장부예요. 규칙대로 세면 '+r.legal.orig+' 대 '+r.legal.forged+'로 원본이 이겨요.';}});
+  say:function(r){return '표 수는 초파리 쪽 '+r.fly+'표, 주판봇 쪽 '+r.robo+'표예요. 그런데 주판봇 표 가운데 '+r.legal.illegal+'표는 등록되지 않은 가짜 장부예요. 규칙대로 세면 '+r.legal.orig+' 대 '+r.legal.forged+'로 원본이 이겨요.';}});
 }});

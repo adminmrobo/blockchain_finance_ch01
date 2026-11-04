@@ -1,6 +1,6 @@
 # 블록체인 편 1장 「장부의 진화」
 
-연구실 해설 대시보드 시리즈의 블록체인 편 첫 장입니다. 박사·하루(조수)·초파리 연구원·Money-Robo가 진행하는 인터랙티브 해설 페이지 7편과 목차로 이루어져 있습니다.
+연구실 해설 대시보드 시리즈의 블록체인 편 첫 장입니다. 박사·하루(조수)·초파리 연구원·주판봇이 진행하는 인터랙티브 해설 페이지 7편과 목차로 이루어져 있습니다.
 
 ## 보는 법
 - `index.html`을 브라우저로 열면 목차가 나옵니다. 설치나 서버가 필요 없습니다.
@@ -12,12 +12,12 @@
 |---|---|---|
 | `index.html` | 1장 목차, 사다리 한 장 요약, 대결 결산 | — |
 | `1-01_money-is-record.html` | 블록체인의 등장 — 돈은 기록이다 (이중 지불) | F 초파리 승 |
-| `1-02_central-vs-distributed.html` | 중앙집중식 vs 분산 네트워크 | R Money-Robo 승 |
+| `1-02_central-vs-distributed.html` | 중앙집중식 vs 분산 네트워크 | R 주판봇 승 |
 | `1-03_memory-and-ledger.html` | 기억과 장부 (시나리오 1·2) | F 초파리 승 |
 | `1-04_contract-and-seal.html` | 계약서와 도장 (병기, 간인·접인) | D 무승부 |
-| `1-05_witness-and-notary.html` | 증인과 공증 | R Money-Robo 승 |
-| `1-06_bank-ledger.html` | 기관 장부: 은행, 중앙 인증 | R Money-Robo 승 |
-| `1-07_many-witnesses.html` | 다수의 증인: 분산원장, 과반의 비용과 투표권 | X Money-Robo 실격 |
+| `1-05_witness-and-notary.html` | 증인과 공증 | R 주판봇 승 |
+| `1-06_bank-ledger.html` | 기관 장부: 은행, 중앙 인증 | R 주판봇 승 |
+| `1-07_many-witnesses.html` | 다수의 증인: 분산원장, 과반의 비용과 투표권 | X 주판봇 실격 |
 | `assets/lab.css` · `assets/lab.js` | 공용 디자인·스크립트 (도우미, 캐릭터, 용어, 퀴즈, 대결, 지식 색인, 꾸러미) | |
 | `assets/sprites.js` | 캐릭터 표정 그림 (공식 저장소 팩에서 이 장에 쓰는 것만, 96px + 192px) | |
 | `docs/IMG_1-0n_*.md` | 편마다 이미지 제작 명세서 (외부 의뢰 프롬프트 포함) | |

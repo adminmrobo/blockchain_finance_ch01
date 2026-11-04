@@ -59,8 +59,8 @@ LAB.start({anchor:'C',init:function(){
 
 /* 대결 */
 function sim(check){var r=rng(101),dup=0;for(var i=0;i<100;i++){if(r()<0.3){if(!check)dup++;}}return dup;}
-Duel({names:{fly:'초파리 (기록부 확인)',robo:'Money-Robo (즉시 승인)'},higherIsBetter:false,drawMargin:0,
+Duel({names:{fly:'초파리 (기록부 확인)',robo:'주판봇 (즉시 승인)'},higherIsBetter:false,drawMargin:0,
   run:function(){return {fly:sim(true),robo:sim(false)};},bar:function(v){return v/40;},fmt:function(v){return v+'건';},
   lesson:'같은 기록을 확인해야 같은 돈을 두 번 못 쓴다',
-  say:function(r){return '가게가 받아 준 중복 결제는 초파리 쪽 '+r.fly+'건, Money-Robo 쪽 '+r.robo+'건이에요. 손님 100명 중 중복 사용을 시도한 '+r.robo+'명이 Money-Robo 방식에서는 전부 통과했어요.';}});
+  say:function(r){return '가게가 받아 준 중복 결제는 초파리 쪽 '+r.fly+'건, 주판봇 쪽 '+r.robo+'건이에요. 손님 100명 중 중복 사용을 시도한 '+r.robo+'명이 주판봇 방식에서는 전부 통과했어요.';}});
 }});

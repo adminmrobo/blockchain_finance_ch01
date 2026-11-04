@@ -50,8 +50,8 @@ function majUp(n,a){var s=0;for(var k=Math.floor(n/2)+1;k<=n;k++)s+=comb(n,k)*Ma
   addEventListener('resize',upd);upd();})();
 
 function sim(peer){var r=rng(606),ok=0;for(var i=0;i<1000;i++){if(peer){var both=r()<0.94,sloppy=r()<0.7;if(both&&sloppy)ok++;}else{if(r()<0.999)ok++;}}return ok/1000;}
-Duel({names:{fly:'초파리 (각자 기록)',robo:'Money-Robo (은행 장부)'},higherIsBetter:true,drawMargin:0.005,
+Duel({names:{fly:'초파리 (각자 기록)',robo:'주판봇 (은행 장부)'},higherIsBetter:true,drawMargin:0.005,
   run:function(){return {fly:sim(true),robo:sim(false)};},bar:function(v){return v;},fmt:function(v){return (100*v).toFixed(1)+'%';},
   lesson:'당사자 밖의 기준 장부가 다툼을 끝낸다',
-  say:function(r){return '분쟁 1,000건 중 판정 가능한 비율은 초파리 쪽 '+(100*r.fly).toFixed(1)+'%, Money-Robo 쪽 '+(100*r.robo).toFixed(1)+'%예요. 초파리 쪽은 사본이 사라졌거나 꼼꼼한 위조였던 건을 가리지 못했어요.';}});
+  say:function(r){return '분쟁 1,000건 중 판정 가능한 비율은 초파리 쪽 '+(100*r.fly).toFixed(1)+'%, 주판봇 쪽 '+(100*r.robo).toFixed(1)+'%예요. 초파리 쪽은 사본이 사라졌거나 꼼꼼한 위조였던 건을 가리지 못했어요.';}});
 }});

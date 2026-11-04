@@ -2,8 +2,8 @@ import json, os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from template import say
 from build import CHAPTER, ROOT, SRC
-RES = {'1-01': ('F', '초파리 승'), '1-02': ('R', 'Money-Robo 승'), '1-03': ('F', '초파리 승'), '1-04': ('D', '무승부'),
-       '1-05': ('R', 'Money-Robo 승'), '1-06': ('R', 'Money-Robo 승'), '1-07': ('X', 'Money-Robo 실격')}
+RES = {'1-01': ('F', '초파리 승'), '1-02': ('R', '주판봇 승'), '1-03': ('F', '초파리 승'), '1-04': ('D', '무승부'),
+       '1-05': ('R', '주판봇 승'), '1-06': ('R', '주판봇 승'), '1-07': ('X', '주판봇 실격')}
 COL = {'F': 'var(--c-fly)', 'R': 'var(--c-robo)', 'D': 'var(--amber)', 'X': 'var(--c-fly)'}
 DESC = {'1-01': '돈은 장부의 숫자이고, 디지털 숫자는 복사된다. 이중 지불을 직접 일으켜 본다.',
         '1-02': '터미널 하나의 허브형과 이웃끼리 잇는 그물형. 평상시 속도와 고장에 대한 튼튼함을 잰다.',
@@ -36,7 +36,7 @@ html = f'''<!DOCTYPE html><html lang="ko"><head>
     <div class="eyebrow">연구실 해설 대시보드 · 블록체인 편</div>
     <h1>1장 장부의 진화</h1>
     <p class="q">은행 없이, 서로 모르는 사람끼리 "누가 누구에게 얼마를 줬는지" 믿을 수 있을까?</p>
-    <p class="lead">기억 → 각자 장부 → 계약서 → 증인·공증 → 은행 → 다수의 증인. 장부를 지키는 방법이 어떻게 진화해 블록체인의 분산원장에 닿았는지 일곱 편으로 따라갑니다. 편마다 직접 장부를 고쳐 보고, 초파리 연구원과 Money-Robo의 대결로 결론을 확인합니다.</p></div>
+    <p class="lead">기억 → 각자 장부 → 계약서 → 증인·공증 → 은행 → 다수의 증인. 장부를 지키는 방법이 어떻게 진화해 블록체인의 분산원장에 닿았는지 일곱 편으로 따라갑니다. 편마다 직접 장부를 고쳐 보고, 초파리 연구원과 주판봇의 대결로 결론을 확인합니다.</p></div>
     <div class="dialog">{say('doc','front','doc_e08','한 편에 두 칸씩, 모두 열네 칸의 사다리예요. 1-01부터 순서대로 읽으면 각 칸이 앞 칸의 한계에서 시작해요.')}
     {say('asst','smile','asst_e13','숫자는 편마다 이어져요. 1-03의 장부 보존율과 1-04의 위조 비율을 1-06에서 다시 써요.')}</div>
   </div></header>
@@ -52,8 +52,8 @@ html = f'''<!DOCTYPE html><html lang="ko"><head>
   <tr><td>1-07</td><td>참여자 다수</td><td>과반을 동시에</td><td>변조 탐지, 투표 단위 → 2장</td></tr></tbody></table></div>
 </div></section>
 <section class="level" id="score"><div class="wrap"><h2>대결 결산</h2>
-  <section class="kpis"><div class="kpi" style="border-top-color:var(--c-fly)"><b>{tally['F']}승</b><span>초파리 연구원 (실격승 1번 포함)</span></div><div class="kpi" style="border-top-color:var(--c-robo)"><b>{tally['R']}승</b><span>Money-Robo</span></div><div class="kpi a"><b>{tally['D']}번</b><span>무승부</span></div></section>
-  {say('doc','judge','doc_e10','1장은 나눠 가졌다. 평상시 속도와 책임 있는 기관은 Money-Robo가, 기록과 규칙은 초파리가 가져갔다.')}
+  <section class="kpis"><div class="kpi" style="border-top-color:var(--c-fly)"><b>{tally['F']}승</b><span>초파리 연구원 (실격승 1번 포함)</span></div><div class="kpi" style="border-top-color:var(--c-robo)"><b>{tally['R']}승</b><span>주판봇</span></div><div class="kpi a"><b>{tally['D']}번</b><span>무승부</span></div></section>
+  {say('doc','judge','doc_e10','1장은 나눠 가졌다. 평상시 속도와 책임 있는 기관은 주판봇이, 기록과 규칙은 초파리가 가져갔다.')}
 </div></section>
 <section class="level" id="about"><div class="wrap"><h2>이 저장소</h2>
   <p class="sub">각 HTML은 assets/ 폴더의 공용 파일(lab.css, lab.js, sprites.js)을 불러옵니다. 저장소를 통째로 올리거나 내려받아 index.html을 열면 됩니다. 편마다 맨 끝의 "온톨로지·서지 꾸러미"에서 지식 그래프와 참고문헌을 ZIP으로 가져갈 수 있습니다.</p>

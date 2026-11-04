@@ -61,8 +61,8 @@ function drawNet(cv,A,dead,hub,H,label){var W=fit(cv,H),x=cv.getContext('2d');x.
     m.push(['a','이웃 ±'+k+'곳씩이면 평균 '+s.avg.toFixed(3)+'홉. 허브형(1.833)과 비교해 보세요. 연결을 늘리면 빨라지지만 길을 더 깔아야 해요.']);ins($('#ins2'),m);drawB(0);}
   mod(c2b,drawB,true);addEventListener('resize',upd);restart();upd();})();
 
-Duel({names:{fly:'초파리 (그물형 ±2)',robo:'Money-Robo (허브형)'},higherIsBetter:false,drawMargin:0.01,
+Duel({names:{fly:'초파리 (그물형 ±2)',robo:'주판봇 (허브형)'},higherIsBetter:false,drawMargin:0.01,
   run:function(){return {fly:stats(lattice(2),{}).avg,robo:stats(star(),{}).avg};},bar:function(v){return v/2.5;},fmt:function(v){return v.toFixed(3)+'홉';},
   lesson:'평상시에는 한 곳으로 모으는 쪽이 빠르다',
-  say:function(r){return '평균 홉은 초파리 쪽 '+r.fly.toFixed(3)+', Money-Robo 쪽 '+r.robo.toFixed(3)+'이에요. 차이는 '+(r.fly-r.robo).toFixed(3)+'홉, 약 '+Math.round(100*(r.fly/r.robo-1))+'%예요. 고장은 이 대결에서 따지지 않았어요.';}});
+  say:function(r){return '평균 홉은 초파리 쪽 '+r.fly.toFixed(3)+', 주판봇 쪽 '+r.robo.toFixed(3)+'이에요. 차이는 '+(r.fly-r.robo).toFixed(3)+'홉, 약 '+Math.round(100*(r.fly/r.robo-1))+'%예요. 고장은 이 대결에서 따지지 않았어요.';}});
 }});

@@ -60,8 +60,8 @@ function paper(x,X,Y,w,h,doc,title,o){o=o||{};x.fillStyle=o.lost?'rgba(60,60,80,
 
 /* 대결: B 분실 + 새로 쓰기 + 도장 복제, 100장 */
 function duelRun(full){var n=0;for(var i=0;i<100;i++){var A={notation:full,seal:full,num:5000,kor:full?5000:5000,rewritten:true,fakeSeal:true};if(detect(A,null))n++;}return n;}
-Duel({names:{fly:'초파리 (병기+접인)',robo:'Money-Robo (숫자만)'},higherIsBetter:true,drawMargin:0,
+Duel({names:{fly:'초파리 (병기+접인)',robo:'주판봇 (숫자만)'},higherIsBetter:true,drawMargin:0,
   run:function(){return {fly:duelRun(true),robo:duelRun(false)};},bar:function(v){return v/100;},fmt:function(v){return v+'장';},
   lesson:'원본과 대조할 수 없으면 어떤 안전장치도 같다',
-  say:function(r){return '위조 문서 100장 중 찾아낸 장 수는 초파리 쪽 '+r.fly+'장, Money-Robo 쪽 '+r.robo+'장이에요. B 사본이 없고 위조범이 두 표기를 맞게 고쳐서, 두 방식 모두 걸리는 규칙이 없었어요.';}});
+  say:function(r){return '위조 문서 100장 중 찾아낸 장 수는 초파리 쪽 '+r.fly+'장, 주판봇 쪽 '+r.robo+'장이에요. B 사본이 없고 위조범이 두 표기를 맞게 고쳐서, 두 방식 모두 걸리는 규칙이 없었어요.';}});
 }});

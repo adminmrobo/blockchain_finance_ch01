@@ -48,8 +48,8 @@ function wrong(n,p,c){return c+(1-c)*binomTail(n,p);}
     var m=[['g','공증은 권한과 책임으로 틀릴 확률을 크게 낮춰요(이 모형에서 증인 3명의 약 '+Math.round(w3/Math.max(e,1e-9))+'분의 1).'],['a','대신 건당 '+fmt(fee)+'원이 들어요. 작은 거래에는 믿음의 값이 거래보다 비싸져요.']];ins($('#ins2'),m);drawB(0);}
   mod(c2b,drawB,true);addEventListener('resize',upd);upd();})();
 
-Duel({names:{fly:'초파리 (증인 3명)',robo:'Money-Robo (공증)'},higherIsBetter:false,drawMargin:0.001,
+Duel({names:{fly:'초파리 (증인 3명)',robo:'주판봇 (공증)'},higherIsBetter:false,drawMargin:0.001,
   run:function(){return {fly:wrong(3,0.1,0.05),robo:0.005};},bar:function(v){return v/0.1;},fmt:function(v){return (100*v).toFixed(2)+'%';},
   lesson:'머릿수보다 책임지는 증명이 덜 틀린다',
-  say:function(r){return '틀린 기록이 인정될 확률은 초파리 쪽 '+(100*r.fly).toFixed(2)+'%, Money-Robo 쪽 '+(100*r.robo).toFixed(2)+'%예요. 초파리 쪽 7.66% 가운데 5%는 공모 몫이라 증인을 늘려도 줄지 않아요.';}});
+  say:function(r){return '틀린 기록이 인정될 확률은 초파리 쪽 '+(100*r.fly).toFixed(2)+'%, 주판봇 쪽 '+(100*r.robo).toFixed(2)+'%예요. 초파리 쪽 7.66% 가운데 5%는 공모 몫이라 증인을 늘려도 줄지 않아요.';}});
 }});

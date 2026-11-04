@@ -47,8 +47,8 @@ function curve(cv,H,fns,tMark,label){var W=fit(cv,H),x=cv.getContext('2d');x.cle
   addEventListener('resize',upd);upd();})();
 
 function sim(ledger){var r=rng(303),ok=0;for(var i=0;i<100;i++){var a=r(),b=r();var p=ledger?Math.pow(0.97,1):pm(30);if(a<p&&b<p)ok++;}return ok;}
-Duel({names:{fly:'초파리 (각자 장부)',robo:'Money-Robo (기억)'},higherIsBetter:true,drawMargin:0,
+Duel({names:{fly:'초파리 (각자 장부)',robo:'주판봇 (기억)'},higherIsBetter:true,drawMargin:0,
   run:function(){return {fly:sim(true),robo:sim(false)};},bar:function(v){return v/100;},fmt:function(v){return v+'쌍';},
   lesson:'한 달 뒤의 기억은 기록을 이기지 못한다',
-  say:function(r){return '30일 뒤 두 사람 기록이 모두 정확한 쌍은 초파리 쪽 '+r.fly+'쌍, Money-Robo 쪽 '+r.robo+'쌍이에요. 100쌍 중이에요. 시드는 303으로 고정했어요.';}});
+  say:function(r){return '30일 뒤 두 사람 기록이 모두 정확한 쌍은 초파리 쪽 '+r.fly+'쌍, 주판봇 쪽 '+r.robo+'쌍이에요. 100쌍 중이에요. 시드는 303으로 고정했어요.';}});
 }});
