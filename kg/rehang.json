@@ -1,0 +1,139 @@
+{
+ "version": "1.0",
+ "made": "2026-11-24",
+ "via": "rehang-2026-11-24",
+ "domains": [
+  "fin"
+ ],
+ "note": "분야 뼈대 주제에 다시 걸기(ai-lab-retrofit 15장). links는 자동 후보이며 틀린 줄은 지우면 된다. 빌드 스크립트가 있는 저장소는 빌드 끝에 rehang.apply_overlay()가 이 파일을 적용한다.",
+ "topics": {
+  "lab:topic/bitcoin": {
+   "ko": "비트코인",
+   "en": "Bitcoin",
+   "domain": [
+    "fin"
+   ],
+   "level": 2
+  },
+  "lab:topic/blockchain-consensus": {
+   "ko": "합의 알고리즘",
+   "en": "Consensus algorithms",
+   "domain": [
+    "fin"
+   ],
+   "level": 2
+  },
+  "lab:topic/ledger-evolution": {
+   "ko": "장부의 진화",
+   "en": "Evolution of ledgers",
+   "domain": [
+    "fin"
+   ],
+   "level": 2
+  }
+ },
+ "links": {
+  "lab:concept/bitcoin": {
+   "topic": "lab:topic/bitcoin",
+   "score": 3,
+   "why": "이름 같음",
+   "ko": "비트코인"
+  },
+  "lab:concept/blockchain": {
+   "topic": "lab:topic/blockchain-consensus",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "블록체인"
+  },
+  "lab:concept/double-spending": {
+   "topic": "lab:topic/blockchain-consensus",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "이중 지불"
+  },
+  "lab:concept/ledger": {
+   "topic": "lab:topic/ledger-evolution",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "장부"
+  },
+  "lab:concept/majority-vote": {
+   "topic": "lab:topic/blockchain-consensus",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "과반 다수결"
+  },
+  "lab:concept/money-as-record": {
+   "topic": "lab:topic/ledger-evolution",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "장부의 숫자로서의 돈"
+  },
+  "lab:concept/sybil": {
+   "topic": "lab:topic/blockchain-consensus",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "가짜 노드"
+  },
+  "lab:concept/trusted-third-party": {
+   "topic": "lab:topic/ledger-evolution",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "중개자"
+  },
+  "lab:concept/voting-rule": {
+   "topic": "lab:topic/blockchain-consensus",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "투표 규칙 (누가 한 표를 갖나)"
+  },
+  "lab:method/bank-ledger": {
+   "topic": "lab:topic/ledger-evolution",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "기관 장부 (은행 전산 원장)"
+  },
+  "lab:method/centralized-network": {
+   "topic": "lab:topic/ledger-evolution",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "중앙집중식 시스템"
+  },
+  "lab:method/costly-vote": {
+   "topic": "lab:topic/blockchain-consensus",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "복제하기 어려운 투표권"
+  },
+  "lab:method/distributed-ledger": {
+   "topic": "lab:topic/ledger-evolution",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "분산원장"
+  },
+  "lab:simulation/majority-vote": {
+   "topic": "lab:topic/blockchain-consensus",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "과반 투표 실험"
+  },
+  "lab:term/node": {
+   "topic": "lab:topic/blockchain-consensus",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "노드"
+  },
+  "lab:term/white-paper": {
+   "topic": "lab:topic/bitcoin",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "백서"
+  }
+ },
+ "retag": {
+  "from": [],
+  "to": [
+   "fin"
+  ]
+ }
+}
